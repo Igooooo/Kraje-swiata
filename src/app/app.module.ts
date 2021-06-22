@@ -9,7 +9,7 @@ import { CoreModule } from './core/core.module';
 import { MainModule } from './main/main.module';
 import { MainMenuComponent } from './shared/components/main-menu/main-menu.component';
 import { SharedModule } from './shared/shared.module';
-import { DialogAboutMeComponent } from './dialog-about-me/dialog-about-me.component';
+import { DialogAboutMeComponent } from './main/dialog-about-me/dialog-about-me.component';
 
 @NgModule({
   declarations: [

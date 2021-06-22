@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogAboutMeComponent } from 'src/app/dialog-about-me/dialog-about-me.component';
+import { DialogAboutMeComponent } from 'src/app/main/dialog-about-me/dialog-about-me.component';
 
 @Component({
   selector: 'app-about',
