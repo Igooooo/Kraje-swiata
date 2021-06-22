@@ -1,0 +1,29 @@
+<div class="container">
+    <p class="data-header">Ilość: {{countries?.length }} Region: {{regionName}}</p>
+    <div class="row form-group">
+        <span class="icon bi bi-arrow-return-left" (click)="return()"></span>
+     </div>
+    <div class="row form-group">
+        <div class="col-sm-12">
+            <table class="cs-table table table-striped" *ngIf="countries && countries.length > 0; else noCountriesInfo"> 
+                <thead>
+                    <tr>
+                        <th>Numer</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  class="form-group" *ngFor=" let country of countries ; let i = index" (click)="goToCountryDetails(regionName, country)" > <!--  -->
+                        <td>{{i + 1}}</td>
+                        <td> {{ country?.name}} </td>     
+                    </tr>
+                </tbody>
+            </table>
+            <ng-template #noCountriesInfo>
+                <div class="no-cars-info">
+                    <p>Brak krajów do wyświetlenia</p>
+                </div>
+            </ng-template>
+        </div>
+    </div> 
+</div>

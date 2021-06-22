@@ -1,0 +1,35 @@
+<div class="container">
+    <p class="data-header">Kraj: {{ countryName}}</p>
+    <div class="row form-group">
+       <span class="icon bi bi-arrow-return-left" (click)="return()"></span>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-12">
+            <table class="cs-table table table-striped" *ngIf="country && country.length > 0; else noCountryInfo"> 
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Capital</th>
+                        <th>Currency</th>
+                        <th>Population</th>
+                        <th>Area</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr  class="form-group" *ngFor=" let one_country of country ; let i = index" > <!-- | slice:limit_show_one_min:limit_show_one_max -->
+                        <td csImportant> {{ one_country?.name}} </td>
+                        <td csImportant> {{ one_country?.capital}} </td>
+                        <td csImportant> {{ one_country?.currencies[0].name}} </td>
+                        <td csImportant> {{ one_country?.population}} </td>
+                        <td csImportant> {{ one_country?.area}} </td>
+                    </tr>
+                </tbody>
+            </table>
+            <ng-template #noCountryInfo>
+                <div class="no-cars-info">
+                    <p>Brak krajów do wyświetlenia / kraje wczytywane</p>
+                </div>
+            </ng-template>
+        </div>
+    </div> 
+</div>
